@@ -10,10 +10,7 @@ autoinstall:
     keyboard:
         layout: br
     timezone: "America/Araguaina"
-    storage:
-    layout:
-      name: lvm
-      sizing-policy: all
+    
     packages:
         - libreoffice
         - gimp
