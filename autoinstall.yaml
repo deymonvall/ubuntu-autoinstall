@@ -1,28 +1,42 @@
 #cloud-config
 autoinstall:
-    version: 1
-    identity:
-        realname: 'Leandro'
-        hostname: z1tsp01dt10
-        username: leandro
-        password: '$6$rounds=4096$wXwG0tX9R1Qv1z6S$k6Hj8Hq9kC9vK9d2ZqQZz1WQ7F3oQk0r5pWkW7mJ8m0cK6VxXk7z0QeQ8dQz2zG7yq3Fz1cW6vV7pQ3kR5X0b0'
-    locale: pt_BR.utf8
-    keyboard:
-        layout: br
-    timezone: "America/Araguaina"
-    
-    packages:
-        - libreoffice
-        - gimp
-        - vlc
-        - ufw
-    snaps:
-        - name: spotify
-          channel: stable
-          classic: false
-    codecs:
-        install: true
-    drivers:
-        install: true
-    updates: all
-    shutdown: reboot
+  version: 1
+  identity:
+    realname: 'Leandro'
+    hostname: z1tsp01dt10
+    username: leandro
+    password: '$6$rounds=4096$...'
+
+  locale: pt_BR.utf8
+
+  keyboard:
+    layout: br
+
+  timezone: America/Araguaina
+
+  ssh:
+    install-server: true
+    allow-pw: true
+
+  packages:
+    - libreoffice
+    - gimp
+    - vlc
+    - ufw
+
+  snaps:
+    - name: spotify
+      channel: stable
+
+  codecs:
+    install: true
+
+  drivers:
+    install: true
+
+  updates: all
+
+  late-commands:
+    - curtin in-target --target=/target ufw enable
+
+  shutdown: reboot
