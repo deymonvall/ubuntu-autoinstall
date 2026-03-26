@@ -5,7 +5,7 @@ autoinstall:
     realname: 'Leandro'
     hostname: z1tsp01dt10
     username: leandro
-    password: '$6$rounds=4096$...'
+    password: '$6$rounds=4096$k9VbQ2mX7pLwZr8F$Y5cQz3m9Jf0xK2pQv7Zs8dW4rT1bN6uHj3Lk8Pq2mVx5Cz9sQw1Xy7Fz0Rk6Jp3LmN8vT2cQ4bY7Zr5W1p0'
 
   locale: pt_BR.utf8
 
